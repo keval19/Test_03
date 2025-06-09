@@ -6,8 +6,8 @@ from datetime import datetime
 
 class KitchenDesignerAPITest(unittest.TestCase):
     def setUp(self):
-        # Use the local backend URL since the public endpoint is not working
-        self.base_url = "http://localhost:8001/api"
+        # Use the public endpoint URL from frontend's .env
+        self.base_url = "https://c7b6f916-38fa-4559-89a6-da849778aaa2.preview.emergentagent.com/api"
         self.client_name = f"test_client_{datetime.now().strftime('%Y%m%d%H%M%S')}"
         
     def test_01_root_endpoint(self):
